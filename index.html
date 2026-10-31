@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kişisel portföy ve çalışmalarım.">
+  <title>Kişisel Portföy | Web Sitem</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1120;
+      color: #f1f5f9;
+      line-height: 1.7;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(11, 17, 32, 0.95);
+      border-bottom: 1px solid #26334a;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      color: #60a5fa;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    .hero {
+      min-height: 75vh;
+      padding: 100px 8%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      background: radial-gradient(circle at 80% 30%, #172d50, #0b1120 55%);
+    }
+
+    .hero small {
+      color: #60a5fa;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 7vw, 65px);
+      line-height: 1.15;
+      max-width: 750px;
+    }
+
+    .hero h1 span {
+      color: #60a5fa;
+    }
+
+    .hero p {
+      color: #aab8cc;
+      max-width: 600px;
+      margin: 22px 0 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #2563eb;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #3b82f6;
+    }
+
+    section {
+      padding: 80px 8%;
+      scroll-margin-top: 80px;
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 25px;
+    }
+
+    .section-title span {
+      color: #60a5fa;
+    }
+
+    .about p {
+      color: #aab8cc;
+      max-width: 800px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #141f33;
+      border: 1px solid #263751;
+      border-radius: 12px;
+      padding: 25px;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #3b82f6;
+    }
+
+    .card h3 {
+      color: #60a5fa;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #aab8cc;
+      font-size: 14px;
+    }
+
+    .contact p {
+      color: #aab8cc;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #8291a8;
+      border-top: 1px solid #26334a;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .hero {
+        min-height: 65vh;
+      }
+
+      section {
+        padding: 60px 7%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">PORTFÖY.</div>
+
+    <nav>
+      <a href="#anasayfa">Ana Sayfa</a>
+      <a href="#hakkimda">Hakkımda</a>
+      <a href="#yetenekler">Yetenekler</a>
+      <a href="#projeler">Projeler</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero" id="anasayfa">
+      <small>Merhaba, web siteme hoş geldin!</small>
+
+      <h1>Ben <span>Ad Soyad</span></h1>
+
+      <p>
+        Bilgisayar Mühendisliği öğrencisiyim.
+        Teknolojiye, yazılıma ve yeni şeyler öğrenmeye
+        ilgi duyuyorum. Kendimi geliştiriyor ve
+        projeler üretiyorum.
+      </p>
+
+      <a href="#hakkimda" class="btn">Beni Tanı</a>
+    </div>
+
+    <section class="about" id="hakkimda">
+      <h2 class="section-title">Hakkımda<span>.</span></h2>
+
+      <p>
+        Merhaba! Ben Ad Soyad. Bilgisayar Mühendisliği
+        alanında kendimi geliştirmeye çalışan bir öğrenciyim.
+        Yazılım geliştirme, web teknolojileri ve bilgisayar
+        dünyasındaki yeniliklerle ilgileniyorum.
+        Amacım bilgilerimi geliştirerek başarılı projeler
+        ortaya çıkarmak.
+      </p>
+    </section>
+
+    <section id="yetenekler">
+      <h2 class="section-title">Yeteneklerim<span>.</span></h2>
+
+      <div class="cards">
+        <div class="card">
+          <h3>HTML</h3>
+          <p>Web sayfalarının yapısını oluşturma.</p>
+        </div>
+
+        <div class="card">
+          <h3>CSS</h3>
+          <p>Modern ve şık web tasarımları hazırlama.</p>
+        </div>
+
+        <div class="card">
+          <h3>C#</h3>
+          <p>Programlama ve yazılım geliştirme öğrenimi.</p>
+        </div>
+
+        <div class="card">
+          <h3>GitHub</h3>
+          <p>Projeleri saklama ve yönetme.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projeler">
+      <h2 class="section-title">Projelerim<span>.</span></h2>
+
+      <div class="cards">
+        <div class="card">
+          <h3>İlk Web Sitem</h3>
+          <p>Kişisel portföy web sitesi projem.</p>
+        </div>
+
+        <div class="card">
+          <h3>Yeni Projem</h3>
+          <p>Yakında burada yeni çalışmalarım olacak.</p>
+        </div>
+
+        <div class="card">
+          <h3>Gelecek Projeler</h3>
+          <p>Öğrendikçe yeni projeler ekleyeceğim.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="iletisim">
+      <h2 class="section-title">İletişim<span>.</span></h2>
+
+      <p>
+        Benimle iletişime geçmek veya projelerimi
+        incelemek istersen aşağıdaki bağlantıyı kullanabilirsin.
+      </p>
+
+      <a href="mailto:emailadresin@example.com" class="btn">
+        E-posta Gönder
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Ad Soyad | Tüm hakları saklıdır.
+  </footer>
+
+</body>
+</html>
